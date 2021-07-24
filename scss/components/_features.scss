@@ -11,6 +11,20 @@
 		text-align: center;
 		color: map-get($neutral-colors, grayishBlue);
 	}
+	&__status {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 5px;
+		background-color: map-get($neutral-colors, hoverLinks);
+		.status__progress {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			background-color: red;
+		}
+	}
 	&__list {
 		position: relative;
 		display: flex;
@@ -18,16 +32,19 @@
 		width: 70%;
 		margin-top: 30px;
 		list-style-type: none;
-		&::before {
-			content: '';
-			position: absolute;
-			bottom: 0;
-			width: 100%;
-			height: 10px;
-			background-color: red;
-		}
 		.list__item {
 			padding: 10px 0 40px;
+			.item__link {
+				text-decoration: none;
+				color: map-get($neutral-colors, grayishBlue);
+				transition: 0.1s;
+				&:hover {
+					color: map-get($neutral-colors, veryDarkBlue);
+				}
+			}
 		}
 	}
+}
+.activeLink {
+	background-color: map-get($primary-colors, softRed);
 }

@@ -1,0 +1,46 @@
+.information {
+	display: flex;
+	@include flex();
+	justify-content: space-around;
+	margin-top: 100px;
+	&__view {
+		margin-left: 100px;
+		flex-basis: 50%;
+	}
+	&__description {
+		margin-left: 20px;
+		flex-basis: 40%;
+	}
+	&__title {
+		color: map-get($neutral-colors, veryDarkBlue);
+		font-weight: map-get($font-weights, bold);
+		font-size: 1.5rem;
+		margin: 20px 0;
+	}
+	&__describe {
+		margin-bottom: 20px;
+		color: map-get($neutral-colors, grayishBlue);
+		line-height: 175%;
+	}
+	&__btn {
+		@include buttons();
+		color: map-get($neutral-colors, loginLink);
+	}
+	&__view {
+		position: relative;
+		&-img {
+			width: 70%;
+			margin-bottom: 60px;
+		}
+		&-overflow {
+			position: absolute;
+			bottom: 0;
+			left: -25%;
+			right: 35%;
+			height: 25vh;
+			background-color: map-get($primary-colors, softBlue);
+			z-index: -1;
+			border-radius: 0 30% 30% 0;
+		}
+	}
+}
