@@ -1,0 +1,6 @@
+.header {
+	display: flex;
+	@include positioning(relative);
+	@include flex(_, center, space-around);
+	height: 10vh;
+}

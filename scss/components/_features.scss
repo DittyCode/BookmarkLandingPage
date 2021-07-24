@@ -1,0 +1,33 @@
+.features {
+	display: flex;
+	@include flex(column);
+	margin-top: 75px;
+	&__title {
+		color: map-get($neutral-colors, veryDarkBlue);
+	}
+	&__describe {
+		width: 50%;
+		margin: 20px 0;
+		text-align: center;
+		color: map-get($neutral-colors, grayishBlue);
+	}
+	&__list {
+		position: relative;
+		display: flex;
+		@include flex(_, _, space-around);
+		width: 70%;
+		margin-top: 30px;
+		list-style-type: none;
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			height: 10px;
+			background-color: red;
+		}
+		.list__item {
+			padding: 10px 0 40px;
+		}
+	}
+}

@@ -1,0 +1,29 @@
+@mixin flex($flexDirection: row, $alignItems: center, $justifyContent: center) {
+	flex-direction: $flexDirection;
+	align-items: $alignItems;
+	justify-content: $justifyContent;
+}
+@mixin positioning($position: absolute, $top: 0, $left: 0) {
+	position: $position;
+	top: $top;
+	left: $left;
+}
+@mixin mq($media) {
+	@media (max-width: $media) {
+		@content;
+	}
+}
+@mixin WH($width, $height) {
+	width: $width;
+	height: $height;
+}
+
+@mixin buttons() {
+	box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.32);
+	padding: 15px;
+	margin: 0 5px;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+	color: map-get($neutral-colors, veryDarkBlue);
+}

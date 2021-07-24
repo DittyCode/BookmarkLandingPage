@@ -1,0 +1,4 @@
+.page {
+	@include positioning(relative);
+	min-height: 100vh;
+}

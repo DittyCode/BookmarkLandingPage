@@ -1,0 +1,29 @@
+.nav {
+	height: 100%;
+	min-width: 40%;
+	&__list {
+		display: flex;
+		@include flex(_, center, space-around);
+		list-style-type: none;
+		height: inherit;
+		.list__item {
+			padding: 10px 25px;
+			&:nth-last-child(1) {
+				.item__link {
+					color: map-get($neutral-colors, loginLink);
+				}
+			}
+			.item__link {
+				font-size: 0.8rem;
+				text-transform: uppercase;
+				text-decoration: none;
+				color: map-get($neutral-colors, grayishBlue);
+			}
+		}
+	}
+}
+.primary {
+	background-color: map-get($primary-colors, softRed);
+	border-radius: 5px;
+	letter-spacing: 1px;
+}

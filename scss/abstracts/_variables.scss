@@ -1,0 +1,20 @@
+$font-size: 18px;
+$font-family: 'Rubik', sans-serif;
+
+$font-weights: (
+	'normal': 400,
+	'medium': 500,
+	'bold': 700,
+);
+
+$primary-colors: (
+	'softBlue': hsl(231, 69%, 60%),
+	'softRed': hsl(0, 94%, 66%),
+);
+
+$neutral-colors: (
+	'grayishBlue': hsl(229, 8%, 35%),
+	'hoverLinks': hsl(229, 8%, 65%),
+	'veryDarkBlue': hsl(229, 31%, 21%),
+	'loginLink': hsl(0, 0%, 100%),
+);
