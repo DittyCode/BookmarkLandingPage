@@ -57,7 +57,11 @@
 					</ul>
 				</nav>
 				<button class="hamburger" data-hamburger>
-					<img src="./images/icon-hamburger.svg" alt="hamburger icon" />
+					<img
+						data-hamburgerImg
+						src="./images/icon-hamburger.svg"
+						alt="hamburger icon"
+					/>
 				</button>
 			</header>
 			<main class="main">
@@ -80,7 +84,7 @@
 					<div class="main__view-overflow"></div>
 				</section>
 			</main>
-			<section class="features">
+			<section class="features" id="features">
 				<h2 class="features__title">Features</h2>
 				<p class="features__describe">
 					Our aim is to make it quick and easy for you to access your favourite
@@ -89,21 +93,23 @@
 				</p>
 				<ul class="features__list">
 					<li class="list__item">
-						<a href="#" class="item__link" data-featuresLink
+						<a href="#features" class="item__link" data-featuresLink
 							>Simple Bookmarking</a
 						>
 					</li>
 					<li class="list__item">
-						<a href="#" class="item__link" data-featuresLink
+						<a href="#features" class="item__link" data-featuresLink
 							>Speedy Searching</a
 						>
 					</li>
 					<li class="list__item">
-						<a href="#" class="item__link" data-featuresLink>Easy Sharing</a>
+						<a href="#features" class="item__link" data-featuresLink
+							>Easy Sharing</a
+						>
 					</li>
-					<div class="features__status">
+					<li class="features__status">
 						<div class="status__progress" data-featuresStatus></div>
-					</div>
+					</li>
 				</ul>
 			</section>
 			<section class="information">
@@ -152,7 +158,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="faq">
+			<section class="faq" id="faq">
 				<h2 class="faq__title">Frequently Asked Questions</h2>
 				<p class="faq__describe">
 					Here are some of our FAQs. If you have any other questions you'd like
@@ -160,7 +166,7 @@
 				</p>
 				<ul class="faq__list">
 					<li class="faq__item">
-						<a href="" class="item__link"
+						<a href="#faq" class="item__link"
 							>What is Bookmark?<img
 								class="item__link-arrow"
 								src="./images/icon-arrow.svg"
@@ -168,7 +174,7 @@
 						/></a>
 					</li>
 					<li class="faq__item">
-						<a class="item__link"
+						<a href="#faq" class="item__link"
 							>How can I request a new browser?<img
 								class="item__link-arrow"
 								src="./images/icon-arrow.svg"
@@ -176,7 +182,7 @@
 						/></a>
 					</li>
 					<li class="faq__item">
-						<a href="" class="item__link"
+						<a href="#faq" class="item__link"
 							>Is there a mobile app?<img
 								class="item__link-arrow"
 								src="./images/icon-arrow.svg"
@@ -184,7 +190,7 @@
 						/></a>
 					</li>
 					<li class="faq__item">
-						<a href="" class="item__link"
+						<a href="#faq" class="item__link"
 							>What about other Chromium browsers?<img
 								class="item__link-arrow"
 								src="./images/icon-arrow.svg"
@@ -202,9 +208,13 @@
 						type="text"
 						placeholder="Enter your email address"
 						class="newsletter__input"
+						data-emailInput
 					/>
-					<button class="newsletter__btn primary">Contact Us</button>
+					<button class="newsletter__btn primary" data-emailSend>
+						Contact Us
+					</button>
 				</div>
+				<p class="newsletter__message" data-sendMessage></p>
 			</section>
 			<footer class="footer">
 				<div class="footer__logo">
@@ -248,15 +258,3 @@
 		<script src="./js/app.js"></script>
 	</body>
 </html>
-
-<!-- 
-
-  1. Meta tagi
-  2. Accesibility
-  3. Aria żeby był screen reader
-  4. Scss
-  5. Js
-  6. Refractoring
-  7. Nakurwiaj codzienie bracie
-
- -->

@@ -24,6 +24,9 @@
 				text-transform: uppercase;
 				text-decoration: none;
 				color: map-get($neutral-colors, grayishBlue);
+				@include mq(700px) {
+					color: map-get($neutral-colors, extensionCard);
+				}
 			}
 		}
 	}
@@ -34,11 +37,8 @@
 	letter-spacing: 1px;
 }
 .drop {
-	position: absolute;
-	top: 100px;
-	left: 0;
-	height: 40vh;
-	width: 100%;
+	@include positioning(absolute, 100px, 0);
+	@include WH(100%, 40vh);
 	display: flex;
 	@include flex();
 	z-index: 1;

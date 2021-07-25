@@ -3,16 +3,16 @@
 	@include flex(column);
 	margin-top: 100px;
 	&__title {
+		margin: 20px 0;
 		color: map-get($neutral-colors, veryDarkBlue);
 		font-weight: map-get($font-weights, bold);
 		font-size: 1.5rem;
-		margin: 20px 0;
 	}
 	&__describe {
+		width: 50%;
 		margin-bottom: 20px;
 		color: map-get($neutral-colors, grayishBlue);
 		line-height: 175%;
-		width: 50%;
 		text-align: center;
 		@include mq(700px) {
 			width: 80%;
@@ -27,8 +27,8 @@
 		}
 	}
 	&__item {
-		border-top: 1px solid map-get($neutral-colors, borderFaq);
 		padding: 20px 0;
+		border-top: 1px solid map-get($neutral-colors, borderFaq);
 		&:nth-last-child(1) {
 			border-bottom: 1px solid map-get($neutral-colors, borderFaq);
 		}

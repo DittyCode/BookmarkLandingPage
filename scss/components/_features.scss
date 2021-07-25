@@ -17,17 +17,14 @@
 		}
 	}
 	&__status {
+		@include WH(100%, 5px);
 		position: absolute;
 		bottom: 0;
-		width: 100%;
-		height: 5px;
 		background-color: map-get($neutral-colors, hoverLinks);
 		.status__progress {
-			position: absolute;
-			top: 0;
-			left: 0;
+			@include positioning(absolute, 0, 0);
 			height: 100%;
-			background-color: red;
+			background-color: map-get($primary-colors, softRed);
 		}
 	}
 	&__list {

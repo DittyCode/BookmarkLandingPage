@@ -11,9 +11,9 @@
 	}
 	&__title {
 		text-transform: capitalize;
-		color: map-get($neutral-colors, veryDarkBlue);
 		font-weight: map-get($font-weights, bold);
 		font-size: 2rem;
+		color: map-get($neutral-colors, veryDarkBlue);
 		@include mq(700px) {
 			font-size: 1.7rem;
 		}

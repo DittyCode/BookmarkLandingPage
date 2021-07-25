@@ -4,10 +4,7 @@
 	margin-top: 100px;
 	text-align: center;
 	&__title {
-		color: map-get($neutral-colors, veryDarkBlue);
-		font-weight: map-get($font-weights, bold);
-		font-size: 1.5rem;
-		margin: 20px 0;
+		@extend .information__title;
 	}
 	&__describe {
 		margin-bottom: 20px;
@@ -51,14 +48,13 @@
 		.browser__img {
 			width: 70%;
 			@include mq(700px) {
-				width: 40%;
-				height: 40%;
+				@include WH(40%, 40%);
 			}
 		}
 		.browser__title {
+			margin: 20px 0;
 			color: map-get($neutral-colors, veryDarkBlue);
 			font-weight: map-get($font-weights, bold);
-			margin: 20px 0;
 		}
 		.browser__version {
 			margin-bottom: 20px;
