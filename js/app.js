@@ -17,9 +17,9 @@ const progress = {
 	},
 };
 
-const indexOfLink = (target) => links.indexOf(target);
+const indexOfLink = target => links.indexOf(target);
 
-const progressData = (index) => progress[index];
+const progressData = index => progress[index];
 
 const activeLink = ({ target }) => {
 	const index = indexOfLink(target);
@@ -31,7 +31,7 @@ const progressBar = ({ left, width }) => {
 	linksStatus.style.width = `${width}%`;
 };
 
-links.forEach((link) => link.addEventListener('click', (e) => activeLink(e)));
+links.forEach(link => link.addEventListener('click', e => activeLink(e)));
 
 progressBar(progress[0]);
 
@@ -41,7 +41,7 @@ const hamburger = document.querySelector('[data-hamburger]');
 const iconHamburger = document.querySelector('[data-hamburgerImg]');
 const nav = document.querySelector('.nav');
 
-const dropMenu = (e) => {
+const dropMenu = e => {
 	nav.classList.toggle('drop');
 	if (nav.classList.contains('drop')) {
 		iconHamburger.setAttribute('src', './../images/icon-close.svg');
@@ -51,7 +51,7 @@ const dropMenu = (e) => {
 	}
 };
 
-hamburger.addEventListener('click', (e) => dropMenu(e));
+hamburger.addEventListener('click', e => dropMenu(e));
 
 // <<<<<<<<<<<<< Email >>>>>>>>>>>>>
 
@@ -59,7 +59,7 @@ const input = document.querySelector('[data-emailInput]');
 const sendEmail = document.querySelector('[data-emailSend]');
 const message = document.querySelector('[data-sendMessage]');
 
-const checkValidEmail = (email) => {
+const checkValidEmail = email => {
 	const re =
 		/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 	return re.test(email.toLowerCase());
@@ -77,7 +77,7 @@ const sendPersonalEmail = () => {
 			message.textContent = ' Remember about valid email';
 		}
 	} else {
-		message.textContent = "Input can't be empty.";
+		message.textContent = 'Input cant be empty.';
 	}
 	clearMessage();
 };
