@@ -10,6 +10,11 @@
 		margin: 20px 0;
 		text-align: center;
 		color: map-get($neutral-colors, grayishBlue);
+		@include mq(700px) {
+			width: 80%;
+			font-size: 0.9rem;
+			line-height: 150%;
+		}
 	}
 	&__status {
 		position: absolute;
@@ -32,8 +37,15 @@
 		width: 70%;
 		margin-top: 30px;
 		list-style-type: none;
+		@include mq(700px) {
+			flex-direction: column;
+			align-items: center;
+		}
 		.list__item {
 			padding: 10px 0 40px;
+			@include mq(700px) {
+				border-top: 1px solid map-get($neutral-colors, borderFaq);
+			}
 			.item__link {
 				text-decoration: none;
 				color: map-get($neutral-colors, grayishBlue);

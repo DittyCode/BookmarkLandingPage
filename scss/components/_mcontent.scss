@@ -3,6 +3,9 @@
 	@include flex();
 	width: 80%;
 	margin: 50px auto 0;
+	@include mq(700px) {
+		flex-direction: column;
+	}
 	& > * {
 		flex-basis: 50%;
 	}
@@ -11,6 +14,15 @@
 		color: map-get($neutral-colors, veryDarkBlue);
 		font-weight: map-get($font-weights, bold);
 		font-size: 2rem;
+		@include mq(700px) {
+			font-size: 1.7rem;
+		}
+	}
+	&__description {
+		@include mq(700px) {
+			text-align: center;
+			margin-top: 100px;
+		}
 	}
 	&__describe {
 		width: 80%;
@@ -18,12 +30,19 @@
 		line-height: 150%;
 		font-size: 0.8rem;
 		color: map-get($neutral-colors, grayishBlue);
+		@include mq(700px) {
+			width: 100%;
+			font-size: 0.9rem;
+		}
 	}
 	&__btn {
 		@include buttons();
 	}
 	&__view {
 		position: relative;
+		@include mq(700px) {
+			order: -1;
+		}
 		&-overflow {
 			position: absolute;
 			bottom: 0;
@@ -33,6 +52,9 @@
 			background-color: map-get($primary-colors, softBlue);
 			z-index: -1;
 			border-radius: 30% 0 0 30%;
+			@include mq(700px) {
+				right: -10%;
+			}
 		}
 	}
 }

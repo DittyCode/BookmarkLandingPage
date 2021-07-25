@@ -5,22 +5,46 @@
 	height: 30vh;
 	background-color: map-get($primary-colors, softBlue);
 	color: map-get($neutral-colors, extensionCard);
+	@include mq(700px) {
+		text-align: center;
+	}
+	@include mq(700px) {
+		height: 40vh;
+	}
 	&__people {
 		text-transform: uppercase;
 		letter-spacing: 5px;
+		@include mq(700px) {
+			margin-top: 20px;
+		}
 	}
 	&__email {
 		height: 5vh;
 		width: 30%;
 		display: flex;
+		@include mq(700px) {
+			flex-direction: column;
+			height: 15vh;
+			width: 80%;
+		}
 	}
 	&__input {
 		height: 100%;
 		width: 60%;
 		text-align: center;
+		@include mq(700px) {
+			width: 100%;
+			border-radius: 5px;
+			border: none;
+		}
 	}
 	&__btn {
 		@include buttons();
 		color: map-get($neutral-colors, loginLink);
+		@include mq(700px) {
+			padding: 10px;
+			width: 100%;
+			margin: 10px 0;
+		}
 	}
 }

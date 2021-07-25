@@ -1,6 +1,7 @@
 const links = [...document.querySelectorAll('[data-featuresLink]')];
 const linksStatus = document.querySelector('[data-featuresStatus]');
 
+// <<<<<<<<<<<<<<< PROGRESS BAR >>>>>>>>>>>>>>>
 const progress = {
 	0: {
 		left: 0,
@@ -33,3 +34,14 @@ const progressBar = ({ left, width }) => {
 links.forEach((link) => link.addEventListener('click', (e) => activeLink(e)));
 
 progressBar(progress[0]);
+
+// <<<<<<<<<<<<< HAMBURGER >>>>>>>>>>>>>>>>
+
+const hamburger = document.querySelector('[data-hamburger]');
+const nav = document.querySelector('.nav');
+
+const dropMenu = (e) => {
+	nav.classList.toggle('drop');
+};
+
+hamburger.addEventListener('click', (e) => dropMenu(e));

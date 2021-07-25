@@ -13,5 +13,12 @@
 		@include flex();
 		justify-content: space-between;
 		width: 10%;
+		@include mq(700px) {
+			width: 40%;
+		}
+	}
+	@include mq(700px) {
+		flex-direction: column;
+		height: 40vh;
 	}
 }

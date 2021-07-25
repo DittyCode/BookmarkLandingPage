@@ -3,13 +3,24 @@
 	@include flex();
 	justify-content: space-around;
 	margin-top: 100px;
+	@include mq(700px) {
+		flex-direction: column;
+	}
 	&__view {
 		margin-left: 100px;
 		flex-basis: 50%;
+		@include mq(700px) {
+			margin-left: 50px;
+		}
 	}
 	&__description {
 		margin-left: 20px;
 		flex-basis: 40%;
+		@include mq(700px) {
+			text-align: center;
+			margin-left: 0;
+			margin-top: 50px;
+		}
 	}
 	&__title {
 		color: map-get($neutral-colors, veryDarkBlue);
@@ -31,6 +42,9 @@
 		&-img {
 			width: 70%;
 			margin-bottom: 60px;
+			@include mq(700px) {
+				width: 80%;
+			}
 		}
 		&-overflow {
 			position: absolute;
@@ -41,6 +55,9 @@
 			background-color: map-get($primary-colors, softBlue);
 			z-index: -1;
 			border-radius: 0 30% 30% 0;
+			@include mq(700px) {
+				bottom: -15%;
+			}
 		}
 	}
 }
