@@ -1,0 +1,17 @@
+.footer {
+	display: flex;
+	@include flex();
+	justify-content: space-between;
+	padding: 20px 50px;
+	background-color: map-get($neutral-colors, veryDarkBlue);
+	color: white;
+	&__logo-img {
+		filter: brightness(0) invert(1);
+	}
+	&__links {
+		display: flex;
+		@include flex();
+		justify-content: space-between;
+		width: 10%;
+	}
+}

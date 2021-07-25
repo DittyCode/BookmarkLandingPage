@@ -1,0 +1,26 @@
+.newsletter {
+	display: flex;
+	@include flex(column, center, space-around);
+	margin-top: 100px;
+	height: 30vh;
+	background-color: map-get($primary-colors, softBlue);
+	color: map-get($neutral-colors, extensionCard);
+	&__people {
+		text-transform: uppercase;
+		letter-spacing: 5px;
+	}
+	&__email {
+		height: 5vh;
+		width: 30%;
+		display: flex;
+	}
+	&__input {
+		height: 100%;
+		width: 60%;
+		text-align: center;
+	}
+	&__btn {
+		@include buttons();
+		color: map-get($neutral-colors, loginLink);
+	}
+}

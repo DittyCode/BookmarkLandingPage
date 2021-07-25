@@ -1,0 +1,44 @@
+.faq {
+	display: flex;
+	@include flex(column);
+	margin-top: 100px;
+	&__title {
+		color: map-get($neutral-colors, veryDarkBlue);
+		font-weight: map-get($font-weights, bold);
+		font-size: 1.5rem;
+		margin: 20px 0;
+	}
+	&__describe {
+		margin-bottom: 20px;
+		color: map-get($neutral-colors, grayishBlue);
+		line-height: 175%;
+		width: 50%;
+		text-align: center;
+	}
+	&__list {
+		width: 50%;
+		list-style-type: none;
+	}
+	&__item {
+		border-top: 1px solid map-get($neutral-colors, borderFaq);
+		padding: 20px 0;
+		&:nth-last-child(1) {
+			border-bottom: 1px solid map-get($neutral-colors, borderFaq);
+		}
+		.item__link {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			text-decoration: none;
+			color: map-get($neutral-colors, grayishBlue);
+			&-arrow {
+				width: 20px;
+			}
+		}
+	}
+	&__btn {
+		@include buttons();
+		margin-top: 50px;
+		color: map-get($neutral-colors, loginLink);
+	}
+}

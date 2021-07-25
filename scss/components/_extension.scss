@@ -1,0 +1,53 @@
+.extension {
+	display: flex;
+	@include flex(column);
+	margin-top: 100px;
+	text-align: center;
+	&__title {
+		color: map-get($neutral-colors, veryDarkBlue);
+		font-weight: map-get($font-weights, bold);
+		font-size: 1.5rem;
+		margin: 20px 0;
+	}
+	&__describe {
+		margin-bottom: 20px;
+		color: map-get($neutral-colors, grayishBlue);
+		line-height: 175%;
+		width: 50%;
+	}
+	&__browsers {
+		display: flex;
+		@include flex();
+		justify-content: space-around;
+		width: 80%;
+	}
+	&__browser {
+		padding: 80px 50px;
+		background-color: map-get($neutral-colors, extensionCard);
+		box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.32);
+		border-radius: 10px;
+		&:nth-child(2) {
+			margin-top: 150px;
+		}
+		&:nth-child(3) {
+			margin-top: 250px;
+		}
+		.browser__img {
+			width: 70%;
+		}
+		.browser__title {
+			color: map-get($neutral-colors, veryDarkBlue);
+			font-weight: map-get($font-weights, bold);
+			margin: 20px 0;
+		}
+		.browser__version {
+			margin-bottom: 20px;
+			color: map-get($neutral-colors, grayishBlue);
+			line-height: 175%;
+		}
+		.browser__btn {
+			@include buttons();
+			color: map-get($neutral-colors, loginLink);
+		}
+	}
+}
